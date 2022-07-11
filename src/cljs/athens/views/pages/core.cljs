@@ -33,6 +33,7 @@
              :justifyContent "stretch"
              :display "flex"
              :overflowY "auto"
+             
              :sx {"@supports (overflow-y: overlay)" {:overflowY "overlay"}
                   :maskImage "linear-gradient(to bottom,
                   transparent,
@@ -48,6 +49,9 @@
                   black calc(100vh - 5rem), 
                   #000000f0 calc(100vh - 4rem), 
                   #00000088 100vh)"}
+
+                  "&::WebkitScrollbar" {:background "transparent"}
+
                   "&:before" {:content "''"
                               :position "fixed"
                               :zIndex "-1"
@@ -55,12 +59,13 @@
                               :pointerEvents "none"
                               :top "3.25rem"
                               :WebkitAppRegion "no-drag"}
-                  "::WebkitScrollbar" {:background "background.basement"
-                                       :width "0.5rem"
-                                       :height "0.5rem"}
-                  "::WebkitScrollbar-corner" {:bg "background.basement"}
-                  "::WebkitScrollbar-thumb" {:bg "background.upper"
+                  "::WebkitScrollbar" {:background "transparent"
+                                       :width "4px"
+                                       :display "none"}
+                  "::WebkitScrollbar-corner" {:background-color "transparent"}
+                  "::WebkitScrollbar-thumb" {:background-color "transparent"
                                              :borderRadius "full"}
+                  "::WebkitScrollbar-track" {:background-color "transparent"}
                   "> .node-page:first-of-type, .block-page:first-of-type" {:mt 0
                                                                            :pt "var(--app-header-height)"}}
              :on-scroll (when (= @route-name :home)
