@@ -37,7 +37,7 @@ const Wrapper = ({ children }) => <Box
           background: "background.upper",
         },
 
-        "&.close:hover, &:focus, &.close:focus-visible": {
+        "&.close:hover, &.close:focus-visible": {
           background: "#e81123",
           filter: "none",
           color: "#fff",
