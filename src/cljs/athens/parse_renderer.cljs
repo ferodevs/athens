@@ -47,7 +47,7 @@
     (into [:> Box {:as "span"
                    :sx {".link" {:color "link"
                                  :borderRadius "1px"
-                                 :cursor "pointer"
+                                 :cursor "default"
                                  :minWidth "0"
                                  :whiteSpace "inherit"
                                  :wordBreak "inherit"
@@ -152,7 +152,7 @@
                   :borderBottomWidth "1px"
                   :borderBottomStyle "solid"
                   :borderBottomColor "ref.foreground"
-                  :cursor "alias"
+                  :cursor "default"
                   :sx {"WebkitBoxDecorationBreak" "clone"}
                   :_hover {:textDecoration "none"
                            :borderBottomColor "transparent"

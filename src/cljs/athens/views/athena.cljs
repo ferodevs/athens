@@ -332,7 +332,7 @@
                           :color "foreground.secondary"
                           :position "absolute"
                           :transition "opacity 0.1s ease, background 0.1s ease"
-                          :cursor "pointer"
+                          :cursor "default"
                           :border 0
                           :right "2rem"
                           :placeItems "center"
